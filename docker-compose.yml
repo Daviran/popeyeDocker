@@ -9,7 +9,8 @@ services:
     links:
       - redis
       - db
-
+    environment:
+      - 0.0.0.0
   db:
     image: postgres
     volumes:
@@ -19,6 +20,7 @@ services:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
+      - 0.0.0.0
     networks:
       - result-tier
       - back-tier
@@ -30,7 +32,8 @@ services:
     networks:
       - poll-tier
       - back-tier
-      
+    restart: on-failure
+
   poll:
     build: ./poll
     ports:
@@ -38,6 +41,8 @@ services:
     networks:
       - poll-tier
     restart: on-failure
+    environment:
+      - 0.0.0.0
 
   result:
     build: ./result
@@ -47,6 +52,8 @@ services:
       - result-tier
     links:
       - db
+    environment:
+      - 0.0.0.0
 volumes:
   db-data:
 
