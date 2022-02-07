@@ -6,7 +6,7 @@ services:
     build: ./worker
     networks:
       - back-tier
-    links:
+    depends_on:
       - redis
       - db
     environment:
@@ -63,7 +63,7 @@ services:
       - "5001:80"
     networks:
       - result-tier
-    links:
+    depends_on:
       - db
     environment:
       - 0.0.0.0
