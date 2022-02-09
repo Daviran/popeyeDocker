@@ -55,6 +55,9 @@ services:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=password
       - 0.0.0.0
+    depends_on:
+      - db
+      - redis
 
   result:
     restart: on-failure
