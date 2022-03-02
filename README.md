@@ -19,5 +19,14 @@ le "travailleur".
 - 3 Dockerfile à créer, selon les spécificités du projet.
 - 1 docker-compose permettant de faire la liaison entre les 5 éléments de l'application.
 
+## Mode d'emploi pour déployer l'application
+
+### Pré-requis:
+Installer d'abord <a href= "https://docs.docker.com/get-docker/" > Docker </a>  et également <a href="https://docs.docker.com/compose/install/"> Docker-compose.
+  <br><br>
+Puis, on clone le projet et à la racine de ce projet on exécute la commande suivante: 
+  ``` docker-compose up --build ```
+  <br><br>
+  Le résultat sera disponible sur http://localhost:5000
 
 
