@@ -10,9 +10,6 @@ services:
       - redis
       - db
     environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=password
       - 0.0.0.0
   db:
     image: postgres:13.0
@@ -38,9 +35,6 @@ services:
     restart: on-failure
     environment:
       - 0.0.0.0
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=password
 
 
   poll:
@@ -51,9 +45,6 @@ services:
       - poll-tier
     restart: on-failure
     environment:
-      - POSTGRES_DB=postgres
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=password
       - 0.0.0.0
     depends_on:
       - db
