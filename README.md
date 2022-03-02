@@ -22,7 +22,7 @@ le "travailleur".
 ## Mode d'emploi pour déployer l'application
 
 ### Pré-requis:
-Installer d'abord <a href= "https://docs.docker.com/get-docker/" > Docker </a>  et également <a href="https://docs.docker.com/compose/install/"> Docker-compose.
+Installer d'abord <a href= "https://docs.docker.com/get-docker/" > Docker </a>  et également <a href="https://docs.docker.com/compose/install/"> Docker-compose.</a>
   <br><br>
 Puis, on clone le projet et à la racine de ce projet on exécute la commande suivante: 
   ``` docker-compose up --build ```
